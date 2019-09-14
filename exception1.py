@@ -14,7 +14,22 @@ def ask_user():
     """
     Замените pass на ваш код
     """
-    pass
-    
+    dictt = {
+        'Как дела?': 'Хорошо!', 
+        'Что делаешь?': 'Программирую',
+        'Пойдем гулять?': 'Не могу',
+        'Когда сможешь?': 'Завтра'
+    }
+    dictt['Уже все?'] = 'Еще нет'
+    while True:
+        try:
+            user_say = input('Спросите что-нибудь: ')
+            print(dictt[user_say])
+        except KeyError:
+            print(f'Я не понял, что значит {user_say}')
+        except KeyboardInterrupt:
+            print(' - Пока!')
+            break
+        
 if __name__ == "__main__":
     ask_user()

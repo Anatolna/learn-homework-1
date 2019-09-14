@@ -13,14 +13,20 @@
 * Вызвать функцию несколько раз, передавая ей разные праметры 
   и выводя на экран результаты
 
-"""
-
-def main():
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
+  Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
-    """
-    pass
     
-if __name__ == "__main__":
-    main()
+
+"""
+def sss(one, two):
+    if type(one) != str or type(two) != str:
+        return 0
+    if one == two and two != 'learn':
+        return 1
+    if (one != two or len(one) > len(two)) and two != 'learn':
+        return 2
+    if one != two or two == 'learn':
+        return 3
+    else:
+        return 123
+print(sss(456, 'learn'))
